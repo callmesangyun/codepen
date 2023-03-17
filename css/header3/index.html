@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: Layout Test</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap">
+<style>
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+body {
+	line-height: 1;
+	font-family: "Open Sans", "Noto Sans KR", sans-serif;
+	font-size: 1em;
+	color: #000;
+}
+#header{
+	min-width:1200px;
+	height: 159px;
+	border-bottom: 3px solid #d3494f;
+}
+#header .top{
+	height: 39px;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+}
+#header .top .top_inner{
+	margin: 0 auto;
+	width: 1200px;
+}
+#header .top .top_inner .sns{
+	float:left;
+	font-size: 0;
+}
+#header .top .top_inner .sns li{
+	display:inline-block;
+	border-left: 1px solid #ccc; 
+}
+#header .top .top_inner .sns li:last-child{
+    border-right: 1px solid #ccc;
+}
+#header .top .top_inner .sns li a{
+	display:block;
+}
+#header .top .top_inner .sns li a img{
+	width:39px;
+	height:39px;
+}
+#header .top .top_inner .top_right {
+	float:right;
+}
+#header .top .top_inner .top_right .utils{
+	float: left;
+	margin-right: 20px;
+}
+#header .top .top_inner .top_right .utils li{
+	display:inline-block;
+}
+#header .top .top_inner .top_right .utils li a{
+	display:block;
+}
+#header .top .top_inner .top_right .utils li a img{
+	width:39px;
+}
+#header .top .top_inner .top_right .login{
+	float: right;
+	font-size: 0;
+}
+#header .top .top_inner .top_right .login li{
+	display:inline-block;
+	position: relative;
+}
+#header .top .top_inner .top_right .login li a{
+	display: block;
+	padding: 0px 12px;
+	line-height:39px;
+}
+#header .top .top_inner .top_right .login li:after{
+	position:absolute;
+	content:"";
+	right:0px;
+	top: 12px;
+	width:1px;
+	height:13px;
+	background-color:#ccc;
+}
+#header .top .top_inner .top_right .login li:last-child:after{
+	display:none;
+}
+#header .menu{
+	margin: 0 auto;
+	width:1200px;
+	height:120px;
+}
+#header .menu .logo{
+	float:left;
+	margin-top:36px;
+}
+#header .menu .menu_right{
+	float: right;
+}
+#header .menu .gnb{
+	float:left;
+	margin-right: 30px;
+}
+#header .menu .gnb li{
+	display: inline-block;
+}
+#header .menu .gnb li a{
+	display: block;
+	padding: 0 25px; 
+	line-height: 120px;
+	font-size: 20px;
+	font-weight: bold;
+}
+#header .menu .tab{
+	float:left;
+	margin-top:38px;
+}
+
+</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header id="header">
+			<div class="top">
+				<div class="top_inner">
+					<div class="sns">
+						<ul>
+							<li><a href=""><img src="https://callmesangyun.github.io/codepen/css/header3/images/icon_sns1.png" alt="icon_sns1"></a></li>
+							<li><a href=""><img src="https://callmesangyun.github.io/codepen/css/header3/images/icon_sns2.png" alt="icon_sns2"></a></li>
+							<li><a href=""><img src="https://callmesangyun.github.io/codepen/css/header3/images/icon_sns3.png" alt="icon_sns3"></a></li>
+							<li><a href=""><img src="https://callmesangyun.github.io/codepen/css/header3/images/icon_sns4.png" alt="icon_sns4"></a></li>
+							<li><a href=""><img src="https://callmesangyun.github.io/codepen/css/header3/images/icon_sns5.png" alt="icon_sns5"></a></li>
+						</ul>
+					</div>
+					<div class="top_right">
+						<div class="utils">
+							<ul>
+								<li><a href=""><img src="https://callmesangyun.github.io/codepen/css/header3/images/icon_zoom_in.png" alt="icon_zoon_in"></a></li>
+								<li><a href=""><img src="https://callmesangyun.github.io/codepen/css/header3/images/icon_refresh.png" alt="icon_refresh"></a></li>
+								<li><a href=""><img src="https://callmesangyun.github.io/codepen/css/header3/images/icon_zoom_out.png" alt="icon_zoon_out"></a></li>
+							</ul>
+						</div>
+						<div class="login">
+							<ul>
+								<li><a href="">로그인</a></li>
+								<li><a href="">회원가입</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu">
+				<div class="logo">
+					<a href=""><img src="https://callmesangyun.github.io/codepen/css/header3/images/logo.png" alt="logo"></a>
+				</div>
+				<div class="menu_right">
+					<nav class="gnb">
+						<ul>
+							<li><a href="">소식ㆍ정보ㆍ소통</a></li>
+							<li><a href="">시행학</a></li>
+							<li><a href="">평생학습형 일자리</a></li>
+							<li><a href="">광주시민대학</a></li>
+							<li><a href="">진흥원</a></li>
+						</ul>
+					</nav>
+					<div class="tab">
+						<a href=""><img src="https://callmesangyun.github.io/codepen/css/header3/images/tab.png" alt="tab"></a>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+</body>
+</html>

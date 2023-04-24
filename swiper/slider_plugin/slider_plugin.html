@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: Layout Test</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+<style>
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #eee;
+	color: #000;
+}
+.wrapper .main_slider {
+	width: 950px;
+	height: 450px;
+}
+.wrapper .main_slider .mainSwiper {
+	width: 100%;
+	height: 100%;
+}
+.wrapper .main_slider .mainSwiper .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.wrapper .main_slider .mainSwiper .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.wrapper .main_slider .mainSwiper .swiper-pagination-bullet{
+	width: 8px;
+	height: 8px;
+	background-color: transparent;
+	border: 3px solid #000;
+	opacity: 1;
+	transform: scale(1);
+}
+.wrapper .main_slider .mainSwiper .swiper-pagination-bullets .swiper-pagination-bullet-active{
+	background-color: #000;
+}
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+   $(function(){
+    var swiper = new Swiper(".mainSwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        // dynamicBullets: true,
+      },
+    });
+   });
+  </script>
+</head>
+
+<body>
+<div class="wrapper">
+<div class="main_slider">
+	<div class="swiper mainSwiper">
+		<div class="swiper-wrapper">
+		  <div class="swiper-slide"><img src="images/samsung_main1.jpg" alt="samsung_main1"></div>
+		  <div class="swiper-slide"><img src="images/samsung_main2.jpg" alt="samsung_main2"></div>
+		  <div class="swiper-slide"><img src="images/samsung_main3.jpg" alt="samsung_main3"></div>
+		</div>
+		<div class="swiper-pagination"></div>
+	 </div>
+  </div>
+</div>
+</body>
+</html>
